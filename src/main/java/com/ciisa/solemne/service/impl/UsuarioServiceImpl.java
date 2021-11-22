@@ -26,6 +26,13 @@ public class UsuarioServiceImpl implements UsuarioService{
 
 
 	@Override
+	public int deleteUsuario(int id) {
+		usuarioRepository.deleteById(id);
+		return 0;
+	}
+
+
+	@Override
 	public List<Usuario> listAllUsuario() {
 		
 		return usuarioRepository.findAll();

@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,8 +56,16 @@ public class UsuarioController {
 			return ResponseEntity.status(200).body("Usuario actualizado correctamente");
 		} catch (Exception e) {
 			return ResponseEntity.status(500).body(e);
+		}	
+	}
+	@DeleteMapping(value="/deleteUsuario/{idUsuario}")
+	public ResponseEntity updateMascota(@PathVariable("idUsuario") int idUsuario) {
+		try {
+			usuarioService.deleteUsuario(idUsuario);
+			return ResponseEntity.status(200).body("Usuario eliminado correctamente");
+		} catch (Exception e) {
+			return ResponseEntity.status(500).body(e);
 		}
-	
 		
 	}
 
