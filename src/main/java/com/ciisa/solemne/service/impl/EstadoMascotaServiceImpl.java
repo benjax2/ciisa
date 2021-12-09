@@ -12,9 +12,16 @@ import com.ciisa.solemne.service.EstadoMascotaService;
 
 @Service("estadoMascotaServiceImpl")
 public class EstadoMascotaServiceImpl implements EstadoMascotaService {
+
+
 	@Autowired
 	@Qualifier("estadoMascotaRepository")
 	private EstadoMascotaRepository estadoMascotaRepository;
+	
+	@Override
+	public List<EstadoMascota> getMascotaById(int id) {
+		return estadoMascotaRepository.findById(id);
+	}
 	
 	@Override
 	public EstadoMascota addEstadoMascota(EstadoMascota estadoMascota) {

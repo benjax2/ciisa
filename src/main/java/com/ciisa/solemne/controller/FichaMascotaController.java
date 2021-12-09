@@ -62,7 +62,7 @@ public class FichaMascotaController {
 	public ResponseEntity deleteFichaMascota(@PathVariable("idFichaMascota") int idFichaMascota) {
 		try {
 			fichaMascotaService.deleteFichaMascota(idFichaMascota);
-			return ResponseEntity.status(200).body("Mascota eliminada correctamente");
+			return ResponseEntity.status(200).body("Ficha Mascota eliminada correctamente");
 		} catch (Exception e) {
 			return ResponseEntity.status(500).body(e);
 		}

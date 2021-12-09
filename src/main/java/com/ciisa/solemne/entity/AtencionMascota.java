@@ -18,6 +18,9 @@ public class AtencionMascota {
     @Column(name = "id_Atencion_Mascota")
 	private Integer id;
 	
+	@Column(name = "id_mascota")
+	private Integer idMascota;
+	
     @Column(name = "id_Estado_Mascota")
 	private Integer idEstadoMascota;
     
@@ -37,6 +40,14 @@ public class AtencionMascota {
 
 	public Integer getId() {
 		return id;
+	}
+
+	public Integer getIdMascota() {
+		return idMascota;
+	}
+
+	public void setIdMascota(Integer idMascota) {
+		this.idMascota = idMascota;
 	}
 
 	public void setId(Integer id) {

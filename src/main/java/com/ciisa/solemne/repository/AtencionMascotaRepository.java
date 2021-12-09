@@ -8,5 +8,6 @@ import com.ciisa.solemne.entity.AtencionMascota;
 
 @Repository("atencionMascotaRepository")
 public interface AtencionMascotaRepository extends JpaRepository<AtencionMascota, Serializable> {
+	
 
 }

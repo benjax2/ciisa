@@ -8,6 +8,7 @@ public interface EstadoMascotaService {
 	
 	public EstadoMascota addEstadoMascota(EstadoMascota estadoMascota);
 	public List<EstadoMascota> listAllEstadoMascota();
+	public List<EstadoMascota> getMascotaById(int id);
 	public int deleteEstadoMascota(int id);
 
 }
